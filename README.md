@@ -49,5 +49,18 @@
 <div align="right">
   <a href="https://imgur.com/mbJvIPu"><img src="https://i.imgur.com/mbJvIPu.png" title="source: imgur.com" align="left"/></a>
   <h3>📄 Mass payouts</h3>
-  <p>Make mass payouts to thousands of addresses with automatic conversion in just one moment.</p>
+  <p>
+        Make mass payouts to thousands of addresses with automatic conversion in just one moment. <br/>
+        <a href="https://cryptomus.com/processing">All features</a>
+  </p>
 </div><br/>
+
+<h1 align="center">About This Project</h1>
+<p align="center">
+This project is written on pure enthusiasm, I want this library to be usable and used regularly. This project has the ability to run synchronously or asynchronously, which makes it more flexible.
+The project will be maintained and improved, and you can buy me a coffee :)
+Thanks, have a good day!
+</p>
+<div align="center">
+      <a href="https://www.buymeacoffee.com/fsoky" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;"></a>
+</div>
