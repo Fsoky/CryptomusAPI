@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0.5-blueviolet" alt="Project Version">
+    <img src="https://img.shields.io/badge/Version-1.0.0-blueviolet" alt="Project Version">
     <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
 <p align="center">
@@ -61,6 +61,31 @@ This project is written on pure enthusiasm, I want this library to be usable and
 The project will be maintained and improved, and you can buy me a coffee :)
 Thanks, have a good day!
 </p>
+
 <div align="center">
       <a href="https://www.buymeacoffee.com/fsoky" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;"></a>
 </div>
+
+<h1 align="center">Installation</h1>
+
+- Installation using the pip package manager
+```bash
+$ pip install CryptomusPay
+```
+- Install from GitHub *(requires [git](https://git-scm.com/downloads))*
+```bash
+$ git clone https://github.com/Fsoky/CryptomusPay
+$ cd CryptomusPay
+$ python setup.py install
+```
+- Or
+```bash
+$ pip install git+https://github.com/Fsoky/CryptomusPay
+```
+
+<h1 align="center">Get Started</h1>
+
+> [!TIP]
+> Refer to the documentation in any unclear situation: https://doc.cryptomus.com/
+
+_soon..._
