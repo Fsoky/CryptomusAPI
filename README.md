@@ -70,22 +70,71 @@ Thanks, have a good day!
 
 - Installation using the pip package manager
 ```bash
-$ pip install CryptomusPay
+$ pip install CryptomusAPI
 ```
 - Install from GitHub *(requires [git](https://git-scm.com/downloads))*
 ```bash
-$ git clone https://github.com/Fsoky/CryptomusPay
-$ cd CryptomusPay
+$ git clone https://github.com/Fsoky/CryptomusAPI
+$ cd CryptomusAPI
 $ python setup.py install
 ```
 - Or
 ```bash
-$ pip install git+https://github.com/Fsoky/CryptomusPay
+$ pip install git+https://github.com/Fsoky/CryptomusAPI
 ```
 
 <h1 align="center">Get Started</h1>
 
 > [!TIP]
-> Refer to the documentation in any unclear situation: https://doc.cryptomus.com/
+> Refer to the documentation in any unclear situation: https://doc.cryptomus.com/ \
+> To get **MERCHANT_ID** and **API_KEY** register and send an application to https://cryptomus.com/
+> 
+> _⚠ Make sure you have a **ready project** in which you will connect **Cryptomus** otherwise the key will not be issued!_
 
-_soon..._
+- You can use the asynchronous manager with
+```python
+import asyncio
+from CryptomusAPI import Cryptomus
+
+MERCHANT_ID = "123ABC"
+API_KEY = "12345ABCDE"
+
+
+async def main() -> None:
+    async with Cryptomus(MERCHANT_ID, API_KEY) as api:
+        ...
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+- Or you can simply create an instance of the Cryptomus class
+```python
+api = Cryptomus(MERCHANT_ID, API_KEY)
+```
+
+### Creating an invoice
+```python
+await api.payments.create_invoice(
+    amount=10,
+    order_id="TEST-ORDER-1", # This parameter must not contain spaces.
+    currency="USD", # or crypto currency like TON
+    lifetime=300 # Invoice lifetime (in seconds), default 3600
+)
+```
+
+> [!TIP]
+> Enums can be used for parameters
+```python
+from CryptomusAPI.enums import CryptoCurrency
+...create_invoice(..., currency=CryptoCurrency.USDT)
+```
+
+#### Obtaining data from a method
+```python
+invoice = await api.payments.create_invoice(...)
+print(invoice.result.url) # >>> https://...
+```
+
+_The module is under development, please be patient, thank you!_
