@@ -1,8 +1,8 @@
 from . import enums, exceptions
-from .cryptomusapi import Cryptomus
+from .client.client import CryptomusClient
 
 __all__ = (
     "enums",
     "exceptions",
-    "Cryptomus"
+    "CryptomusClient"
 )
