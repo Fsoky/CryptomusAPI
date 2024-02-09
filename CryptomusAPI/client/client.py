@@ -69,6 +69,7 @@ class CryptomusClient:
         url_callback: str | None = None,
         from_referral_code: str | None = None
     ) -> WalletResponse:
+        # This method can return text/html. status code 405
         return await self.session(CreateWallet(**self.__get_func_params(locals())))
     
     async def block_wallet(
