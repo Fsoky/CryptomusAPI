@@ -108,6 +108,7 @@ async def main() -> None:
         network="tron",
         lifetime=300
     )
+    await api.session.close()
     print(invoice.url)
 
 
