@@ -94,50 +94,23 @@ $ pip install git+https://github.com/Fsoky/CryptomusAPI
 > 
 > _⚠ Make sure you have a **ready project** in which you will connect **Cryptomus** otherwise the key will not be issued!_
 
-- You can use the asynchronous manager with
 ```python
 import asyncio
-from CryptomusAPI import Cryptomus
+from CryptomusAPI import CryptomusClient
 
-MERCHANT_ID = "123ABC"
-API_KEY = "12345ABCDE"
+api = CryptomusClient("MERCHANT-UUID", "API-KEY")
 
 
 async def main() -> None:
-    async with Cryptomus(MERCHANT_ID, API_KEY) as api:
-        ...
+    invoice = await api.create_invoice(
+        amount=10,
+        currency="USDT"
+        network="tron",
+        lifetime=300
+    )
+    print(invoice.url)
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
-```
-
-- Or you can simply create an instance of the Cryptomus class
-```python
-api = Cryptomus(MERCHANT_ID, API_KEY)
-```
-
-### Creating an invoice
-```python
-await api.payments.create_invoice(
-    amount=10,
-    order_id="TEST-ORDER-1", # This parameter must not contain spaces.
-    currency="USD", # or crypto currency like TON
-    lifetime=300 # Invoice lifetime (in seconds), default 3600
-)
-```
-
-> [!TIP]
-> Enums can be used for parameters
-```python
-from CryptomusAPI.enums import CryptoCurrency
-...create_invoice(..., currency=CryptoCurrency.USDT)
-```
-
-#### Obtaining data from a method
-```python
-invoice = await api.payments.create_invoice(...)
-print(invoice.result.url) # >>> https://...
-```
-
-_The module is under development, please be patient, thank you!_
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main()) # I need fix this.
