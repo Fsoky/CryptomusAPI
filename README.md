@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0.0-blueviolet" alt="Project Version">
+    <img src="https://img.shields.io/badge/Version-1.0.1dev-blueviolet" alt="Project Version">
     <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
 <p align="center">
@@ -67,6 +67,9 @@ Thanks, have a good day!
 </div>
 
 <h1 align="center">Installation</h1>
+
+> [!WARNING]
+> Current Version in DEV. MODE (beta. u know.)
 
 - Installation using the pip package manager
 ```bash
