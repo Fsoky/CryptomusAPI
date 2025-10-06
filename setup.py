@@ -9,7 +9,7 @@ def read(filename):
 
 setup(
     name="CryptomusAPI",
-    version="1.0.1",
+    version="1.0.2",
     description="Easy interaction with Cryptomus API, support for asynchronous approaches",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
