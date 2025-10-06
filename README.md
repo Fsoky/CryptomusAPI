@@ -72,16 +72,21 @@ Thanks, have a good day!
 > Current Version in DEV. MODE (beta. u know.)
 
 - Installation using the pip package manager
+
 ```bash
 $ pip install CryptomusAPI
 ```
-- Install from GitHub *(requires [git](https://git-scm.com/downloads))*
+
+- Install from GitHub _(requires [git](https://git-scm.com/downloads))_
+
 ```bash
 $ git clone https://github.com/Fsoky/CryptomusAPI
 $ cd CryptomusAPI
 $ python setup.py install
 ```
+
 - Or
+
 ```bash
 $ pip install git+https://github.com/Fsoky/CryptomusAPI
 ```
@@ -91,7 +96,7 @@ $ pip install git+https://github.com/Fsoky/CryptomusAPI
 > [!TIP]
 > Refer to the documentation in any unclear situation: https://doc.cryptomus.com/ \
 > To get **MERCHANT_ID** and **API_KEY** register and send an application to https://cryptomus.com/
-> 
+>
 > _⚠ Make sure you have a **ready project** in which you will connect **Cryptomus** otherwise the key will not be issued!_
 
 ```python
@@ -108,10 +113,11 @@ async def main() -> None:
         network="tron",
         lifetime=300
     )
-    await api.session.close()
     print(invoice.url)
+
+    await api.session.close()
 
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main()) # I need fix this.
+    asyncio.run(main())
+```
